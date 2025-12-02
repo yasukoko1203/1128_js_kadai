@@ -1,113 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <title>WBS管理ツール</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
+  <div class="container">
     <h1>WBS管理ツール</h1>
-    <main>
-        <div id="wbs-area">
-            <div class="contents">
-                <label>カテゴリ</label>
-                <input class="category" type="text" placeholder="業務カテゴリを入力" id="category">
-            </div>
-            <div class="contents">
-                <label>タスク概要</label>
-                <input class="category" type="text" placeholder="タスク概要を記載" id="category">
-            </div>
-            <div class="contents">
-                <label>タスク詳細</label>
-                <input class="category" type="text" placeholder="業務カテゴリを入力" id="category">
-            </div>
 
-            <div class="contents">
-                <label>開始日</label>
-                <input class="category" type="text" placeholder="業務カテゴリを入力" id="category">
-            </div>
+    <div class="toolbar">
+      <button id="addRowBtn" type="button">行を追加</button>
+      <button id="saveBtn" type="button">保存</button>
+      <button id="clearBtn" type="button">全データ削除</button>
+      <span id="status" class="status"></span>
+    </div>
 
-            <div class="contents">
-                <label>終了日</label>
-                <input class="category" type="text" placeholder="業務カテゴリを入力" id="category">
-            </div>
+    <div class="table-wrapper">
+      <table id="wbsTable">
+        <thead>
+          <tr>
+            <th style="width: 40px;">No</th>
+            <th>カテゴリ</th>
+            <th>タスク概要</th>
+            <th>タスク詳細</th>
+            <th>開始日</th>
+            <th>終了日</th>
+            <th>優先度</th>
+            <th>担当者</th>
+            <th>所要時間(h)</th>
+            <th>実績(h)</th>
+            <th style="width: 70px;">操作</th>
+          </tr>
+        </thead>
+        <tbody id="wbsBody">
+          <!-- JS で行を生成します -->
+        </tbody>
+      </table>
+    </div>
+  </div>
 
-            <div class="contents">
-                <label>優先度</label>
-                <input class="category" type="text" placeholder="業務カテゴリを入力" id="category">
-            </div>
-
-
-            <div class="contents">
-                <label>担当者</label>
-                <input class="category" type="text" placeholder="業務カテゴリを入力" id="category">
-            </div>
-
-            <div class="contents">
-                <label>所要時間</label>
-                <input class="category" type="text" placeholder="業務カテゴリを入力" id="category">
-            </div>
-
-            <div class="contents">
-                <label>実績（ｈ）
-                </label>
-                <input class="category" type="text" placeholder="業務カテゴリを入力" id="category">
-            </div>
-
-
-
-
-            <div class="contents">
-                <label>カテゴリ</label>
-                <input class="category" type="text" placeholder="業務カテゴリを入力" id="category">
-            </div>
-
-            <div class="contents">
-                <label>カテゴリ</label>
-                <input class="category" type="text" placeholder="業務カテゴリを入力" id="category">
-            </div>
-
-
-
-
-            </div>
-            
-            <label class="category-title">タスク概要</label>
-            <input class="category" type="text" placeholder="タスク概要" id="category">
-            
-            <label class="category-title">タスク詳細</label>
-            <textarea id="task-details" placeholder="タスク詳細を入力"></textarea>
-            
-            <label class="category-title">開始日</label>
-            <input id="start" type="datetime-local">
-            
-            <label class="category-title">終了日</label>
-            <input id ="end" type="datetime-local">
-            
-            <label class="category-title">優先度</label>
-            
-            <label class="category-title">担当者</label>
-            <input id="incharge" type="text" placeholder="担当者名">
-
-            <input id=" estimate-time" type="text"placeholder="想定所要時間">
-            <label class="category-title">所要時間</label>
-
-            <input id ="actual-time" type="text"placeholder="実績">
-            <label class="category-title">実績（h）</label>
-
-            <label class="category-title">備考欄</label>
-            <textarea id="bikouran" placeholder="タスクに対する意気込み等を記載"></textarea>
-
-        </div>
-    
-
-
-
-    </main>
-
-
-     <script src="wbs.js"></script>
-
+  <script src="script.js"></script>
 </body>
 </html>
