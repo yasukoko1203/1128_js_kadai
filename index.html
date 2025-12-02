@@ -3,7 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <title>WBS管理ツール</title>
-  <link rel="stylesheet" href="style.css" />
+
+  <!-- CSS は css フォルダ配下 -->
+  <link rel="stylesheet" href="./css/reset.css" />
+  <link rel="stylesheet" href="./css/style.css" />
+
+  <!-- JS は js フォルダ配下 & ファイル名は wbs.js -->
+  <script src="./js/wbs.js" defer></script>
 </head>
 <body>
   <div class="container">
@@ -34,12 +40,10 @@
           </tr>
         </thead>
         <tbody id="wbsBody">
-          <!-- JS で行を生成します -->
+          <!-- JS で行を生成 -->
         </tbody>
       </table>
     </div>
   </div>
-
-  <script src="script.js"></script>
 </body>
 </html>
